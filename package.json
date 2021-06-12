@@ -1,0 +1,24 @@
+{
+    "name": "project-template-backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "start": "nodemon ./bin/www",
+      "tsc": "tsc -p ./tsconfig.json",
+      "start:dev": "nodemon --watch src/ --exec \"yarn serve\" -e ts",
+      "serve": "tsc && node ./bin/www",
+      "compile": "tsc -p ./tsconfig.json",
+      "test": "jest --runInBand",
+      "clean": "rm -rf dist && mkdir dist",
+      "heroku-postbuild": "yarn clean && yarn compile",
+      "lint": "eslint . --ext ts",
+      "lint:fix": "eslint . --ext ts --fix"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "jest": {
+      "testEnvironment": "node"
+    }
+  }
+  
